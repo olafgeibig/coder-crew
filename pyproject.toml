@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "coder-crew"
+version = "0.1.0"
+description = ""
+authors = ["Olaf <olaf@pobox.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+# crewai = {extras = ["tools"], version = "^0.51.1"}
+# regex = "2024.7.24"  # Force the use of the specific regex version
+aider-chat = "^0.54.6"
+open-interpreter = "^0.3.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+ruff = "^0.6.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+coder-crew = "coder_crew.main:main"
